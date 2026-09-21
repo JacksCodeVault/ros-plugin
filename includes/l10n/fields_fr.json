@@ -1,0 +1,354 @@
+{
+  "device_name": {
+    "name": "name",
+    "label": "Nom du routeur",
+    "describe": true,
+    "description": "Définissez le nom désiré pour le routeur. Le nom ne peut pas être modifié si le routeur a des utilisateurs.",
+    "hint": "",
+    "width": null,
+    "obscure": null,
+    "type": null,
+    "isAttribute": null
+  },
+  "device_ip": {
+    "name": "ip",
+    "label": "Nom d'hôte ou adresse IP",
+    "describe": true,
+    "description": "Définir le nom d'hôte ou l'adresse IP du routeur",
+    "hint": "test.example.com / 10.88.1.1",
+    "width": null,
+    "obscure": null,
+    "type": null,
+    "isAttribute": null
+  },
+  "device_port" :
+  {
+    "name" : "port",
+    "label" : "Port number",
+    "hint" : "443",
+    "describe" : true,
+    "description" : "Set device port number"
+  },
+  "device_pool": {
+    "name": "pool",
+    "label": "Pool d'adresse IPv4",
+    "describe": true,
+    "description": "Définir les préfixes IPv4 pour les clients - requis pour dhcp. Pour utiliser ces pools de périphériques pour ppp, activez l'option dans les paramètres de l'api.",
+    "hint": "10.88.1.0/24",
+    "width": 600,
+    "obscure": null,
+    "type": null,
+    "isAttribute": null
+  },
+  "device_pool6":
+  {
+    "name" : "pool6",
+    "width" : "600",
+    "label" : "Pool d'adresse IPv6",
+    "hint" : "fddc:9057:1bea::/48",
+    "describe" : true,
+    "description" : "Définissez des préfixes IPv6 pour attribuer aux clients. Actuellement, seul IPv6 sur PPP est pris en charge. Les préfixes peuvent être réutilisés sur de nombreux routeurs."
+  },
+  "device_pfxLength":
+  {
+    "name" : "pfxLength",
+    "width" : "600",
+    "label" : "Longueur du préfixe IPv6 attribuée au client",
+    "hint" : "/64",
+    "describe" : true,
+    "description" : "Spécifie la taille du préfixe IPv6 à attribuer à chaque client"
+  },
+  "device_user": {
+    "name": "user",
+    "label": "Nom d'utilisateur",
+    "describe": true,
+    "description": "Indiquez le nom d'utilisateur pour la connexion au routeur",
+    "hint": "",
+    "width": null,
+    "obscure": null,
+    "type": null,
+    "isAttribute": null
+  },
+  "device_password": {
+    "name": "password",
+    "label": "Mot De Passe",
+    "describe": true,
+    "description": "Fournissez un mot de passe pour la connexion au routeur",
+    "hint": "",
+    "width": null,
+    "obscure": true,
+    "type": null,
+    "isAttribute": null
+  },
+  "device_dbname": {
+    "name": "dbname",
+    "label": "Nom de la base de données",
+    "describe": true,
+    "description": "Nom de la base de données",
+    "hint": "",
+    "width": null,
+    "obscure": null,
+    "type": null,
+    "isAttribute": null
+  },
+  "config_auto_ppp_user": {
+    "name": "auto_ppp_user",
+    "label": "Générer automatiquement le nom d'utilisateur PPP",
+    "describe": true,
+    "description": "Activer la génération automatique du nom d'utilisateur et du mot de passe",
+    "hint": "",
+    "width": null,
+    "obscure": null,
+    "type": null,
+    "isAttribute": null
+  },
+  "config_uisp_url": {
+    "name": "uisp_url",
+    "label": "URL de l'instance UISP",
+    "describe": true,
+    "description": "Si ce logiciel n'est pas exécuté sur le même serveur que UISP, changez localhost pour le FQDN ou l'adresse IP et port de votre serveur UISP",
+    "hint": "",
+    "width": 600,
+    "obscure": null,
+    "type": null,
+    "isAttribute": null
+  },
+  "config_uisp_token": {
+    "name": "uisp_token",
+    "label": "Jeton d'authtification (Auth token) API UISP",
+    "describe": true,
+    "description": "Générez le jeton d'auentification (Auth token) dans les paramètres des utilisateurs dans la section NMS de UISP. Le jeton permet à ce logiciel de récupérer des données depuis la section NMS de UISP.",
+    "hint": "",
+    "width": null,
+    "obscure": null,
+    "type": null,
+    "isAttribute": null
+  },
+  "config_ppp_pool": {
+    "name": "ppp_pool",
+    "label": "Pool d'adresses PPPoE globales",
+    "describe": true,
+    "description": "Spécifiez les sous-réseaux séparés par des virgules à utiliser pour les comptes PPPoE. Les pools globaux sont utilisés sur n'importe quel routeur et nécessitent un protocole de routage dynamique tel que OSPF ou RIP pour propager les adresses encadrées.",
+    "hint": "10.99.0.0/16,10.88.0.0/16",
+    "width": 600,
+    "obscure": null,
+    "type": null,
+    "isAttribute": null
+  },
+  "config_router_ppp_pool": {
+    "name": "router_ppp_pool",
+    "label": "Utiliser le pool DHCP pour PPPoE",
+    "describe": true,
+    "description": "Activez cette option pour utiliser le pool DHCP que vous avez défini sous Périphériques gérés. Cela désactivera le pool PPPoE global ci-dessous",
+    "hint": "",
+    "width": 75,
+    "obscure": null,
+    "type": null,
+    "isAttribute": null
+  },
+  "config_excl_addr": {
+    "name": "excl_addr",
+    "label": "Exclusion d'adresses IP",
+    "describe": true,
+    "description": "Répertorie les adresses ou les plages d'adresses qui ne doivent pas être distribuées aux clients DHCP et PPP à partir des pools",
+    "hint": "10.99.1.1-10.99.1.100,10.99.8.1-10.99.8.100",
+    "width": 600,
+    "obscure": null,
+    "type": null,
+    "isAttribute": null
+  },
+  "config_active_list": {
+    "name": "active_list",
+    "label": "Nom de la liste d'adresses du pare-feu routeur pour les utilisateurs actifs",
+    "describe": true,
+    "description": "Nom facultatif de la liste dans le pare-feu dynamique pour les comptes qui ne sont pas suspendus",
+    "hint": "",
+    "width": 550,
+    "obscure": null,
+    "type": null,
+    "isAttribute": null
+  },
+  "config_disabled_list": {
+    "name": "disabled_list",
+    "label": "Nom de la liste d'adresses dans le pare-feu routeur pour les utilisateurs suspendus",
+    "describe": true,
+    "description": "Nom de la liste de pare-feu dynamique pour filtrer et rediriger les comptes suspendus",
+    "hint": "",
+    "width": 550,
+    "obscure": null,
+    "type": null,
+    "isAttribute": null
+  },
+  "config_disabled_profile": {
+    "name": "disabled_profile",
+    "label": "Profil routeur pour les utilisateurs suspendus",
+    "describe": true,
+    "description": "Profil routeur PPP appliqué aux comptes suspendus. Le profil doit être créé et configuré pour chaque routeur",
+    "hint": "",
+    "width": 550,
+    "obscure": null,
+    "type": null,
+    "isAttribute": null
+  },
+  "config_disabled_rate": {
+    "name": "disabled_rate",
+    "label": "Vitesse appliquée aux comptes suspendus dans le routeur",
+    "describe": true,
+    "description": "Vitesse appliquée aux clients DHCP et aux profils suspendus dans le routeur",
+    "hint": "",
+    "width": 550,
+    "obscure": null,
+    "type": null,
+    "isAttribute": null
+  },
+  "config_unsuspend_date_fix": {
+    "name": "unsuspend_date_fix",
+    "label": "Activer le correctif de date de facture unsuspend",
+    "describe": true,
+    "description": "Permet d'ajuster la date de facturation anniversaire lors de comptes non suspendus",
+    "hint": "",
+    "width": 75,
+    "obscure": null,
+    "type": 1,
+    "isAttribute": null
+  },
+  "config_unsuspend_fix_wait": {
+    "name": "unsuspend_fix_wait",
+    "label": "Délai de fixation de la date de la facture en secondes",
+    "describe": true,
+    "description": "Conserver les 5s par défaut",
+    "hint": "",
+    "width": 100,
+    "obscure": null,
+    "type": null,
+    "isAttribute": null
+  },
+  "config_pppoe_user_attr": {
+    "name": "pppoe_user_attr",
+    "label": "Attribut personnalisé pour le nom d'utilisaterur PPPoE",
+    "describe": true,
+    "description": "Définit le nom d'utilisateur PPPoE du client",
+    "hint": "",
+    "width": null,
+    "obscure": null,
+    "type": null,
+    "isAttribute": true
+  },
+  "config_pppoe_caller_attr": {
+    "name": "pppoe_caller_attr",
+    "label": "Attribut personnalisé pour l'ID de l'appelant",
+    "describe": true,
+    "description": "Définit l'ID de l'appelant PPPoE du client",
+    "hint": "",
+    "width": null,
+    "obscure": null,
+    "type": null,
+    "isAttribute": true
+  },
+  "config_pppoe_pass_attr": {
+    "name": "pppoe_pass_attr",
+    "label": "Attribut personnalisé pour le mot de passe PPPoE du client",
+    "describe": true,
+    "description": "Définit le mot de passe PPPoE du client",
+    "hint": "",
+    "width": null,
+    "obscure": null,
+    "type": null,
+    "isAttribute": true
+  },
+  "config_device_name_attr": {
+    "name": "device_name_attr",
+    "label": "Attribut personnalisé pour le nom du routeur",
+    "describe": true,
+    "description": "Définit le nom du routeur sur lequel le compte de service sera créé",
+    "hint": "",
+    "width": null,
+    "obscure": null,
+    "type": null,
+    "isAttribute": true
+  },
+  "config_mac_addr_attr": {
+    "name": "mac_addr_attr",
+    "label": "Attribut personnalisé pour l'adresse MAC de l'équipement client",
+    "describe": true,
+    "description": "Définit l'adresse MAC de l'équipement du client pour le service DHCP. Notez que fournir une adresse MAC désactive le PPPoE pour ce client",
+    "hint": "",
+    "width": null,
+    "obscure": null,
+    "type": null,
+    "isAttribute": true
+  },
+  "config_dhcp6_duid_attr" :
+  {
+    "name" : "dhcp6_duid_attr",
+    "label" : "Attribut personnalisé pour l'adresse MAC DHCPv6 (DUID) de l'équipement client",
+    "describe" : true,
+    "description" : "Adresse MAC utilisée pour le DUID - ether1 sur routeur",
+    "isAttribute" : true
+  },
+  "config_dhcp6_iaid_attr" :
+  {
+    "name" : "dhcp6_iaid_attr",
+    "label" : "Attribut personnalisé pour le numéro d'interface WAN DHCPv6 (IAID)",
+    "describe" : true,
+    "description" : "Utilisé pour IAID - HEX ou décimal",
+    "isAttribute" : true
+  },
+  "config_ip_addr_attr": {
+    "name": "ip_addr_attr",
+    "label": "Attribut personnalisé pour attribuer manuellement une adresse IP",
+    "describe": true,
+    "description": "Définit une adresse IP attribuée manuellement. L'adresse IP peut provenir d'un pool qui n'est pas défini dans la liste d'adresse du routeur",
+    "hint": "",
+    "width": null,
+    "obscure": null,
+    "type": null,
+    "isAttribute": true
+  },
+  "config_lease_time" :
+  {
+    "name" : "lease_time",
+    "label" : "Durée du bail DHCP",
+    "width" : "75",
+    "describe" : true,
+    "description" : "Spécifiez la durée du bail en minutes. S'applique pour les baux DHCP et DHCPv6."
+  },
+  "config_disable_contention": {
+    "name": "disable_contention",
+    "label": "Désactiver la contention de bande passante",
+    "describe": true,
+    "description": "Cochez cette option pour désactiver les files d'attente parentes. L'application peut prendre quelques minutes et supprimera les files d'attente parentes des routeurs.",
+    "hint": "",
+    "width": 75,
+    "obscure": null,
+    "type": null,
+    "isAttribute": null
+  },
+  "config_hs_enable" :
+  {
+    "name" : "hs_enable",
+    "label" : "Activer les comptes hotspot",
+    "describe" : true,
+    "description" : "Activer ou désactiver l'attribut personnalisé du compte hotspot",
+    "isAttribute" : true
+  },
+  "config_auto_hs_user" :
+  {
+    "name" : "auto_hs_user",
+    "label" : "Nom d'utilisateur du hotspot automatique",
+    "describe" : true,
+    "description" : "Activer le nom d'utilisateur automatique. Cela désactivera les noms d'utilisateurs automatiques de PPP",
+    "isAttribute" : true
+  },
+  "service_ratio": {
+    "name": "ratio",
+    "label": "Définir le taux de contention",
+    "describe": true,
+    "description": "Définit le diviseur du taux de contention",
+    "hint": "nombre ex: 4",
+    "width": 200,
+    "obscure": null,
+    "type": null,
+    "isAttribute": null
+  }
+}

@@ -1,0 +1,18 @@
+name: Usage question
+description: Ask for community help with installation or configuration.
+title: "[Question]: "
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: Explain your goal and what you have tried. Remove passwords, tokens, and customer details.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Plugin, UISP, RouterOS, and PHP versions where known; API or RADIUS mode.
+    validations:
+      required: true

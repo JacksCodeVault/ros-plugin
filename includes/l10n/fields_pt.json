@@ -1,0 +1,354 @@
+{
+   "device_name": {
+      "name": "name",
+      "label": "Nome do dispositivo",
+      "describe": true,
+      "description": "Defina um nome amigável para o dispositivo de gateway. O nome não poderá ser alterado se o dispositivo tiver usuários.",
+      "hint": "",
+      "width": null,
+      "obscure": null,
+      "type": null,
+      "isAttribute": null
+   },
+   "device_ip": {
+      "name": "ip",
+      "label": "Nome do host ou endereço IP",
+      "describe": true,
+      "description": "Definir o endereço IP do dispositivo",
+      "hint": "test.example.com / 10.88.1.1",
+      "width": null,
+      "obscure": null,
+      "type": null,
+      "isAttribute": null
+   },
+   "device_port" :
+   {
+      "name" : "port",
+      "label" : "Port number",
+      "hint" : "443",
+      "describe" : true,
+      "description" : "Set device port number"
+   },
+   "device_pool": {
+      "name": "pool",
+      "label": "Piscina IP4",
+      "describe": true,
+      "description": "Defina prefixos ip4 para clientes - necessários para dhcp. Para usar esses pools de dispositivos para ppp, ative a opção nas configurações da api.",
+      "hint": "10.88.1.0/24",
+      "width": 600,
+      "obscure": null,
+      "type": null,
+      "isAttribute": null
+   },
+   "device_pool6":
+   {
+      "name" : "pool6",
+      "width" : "600",
+      "label" : "Piscina IP6",
+      "hint" : "fddc:9057:1bea::/48",
+      "describe" : true,
+      "description" : "Defina prefixos ip6 para atribuir clientes. Atualmente apenas ip6 sobre ppp é suportado. Os prefixos podem ser reutilizados em muitos roteadores."
+   },
+   "device_pfxLength":
+   {
+      "name" : "pfxLength",
+      "width" : "600",
+      "label" : "Comprimento do prefixo ip6 do cliente",
+      "hint" : "/64",
+      "describe" : true,
+      "description" : "Especifica o tamanho do prefixo ip6 para atribuir a cada cliente"
+   },
+   "device_user": {
+      "name": "user",
+      "label": "Nome de usuário",
+      "describe": true,
+      "description": "Forneça o nome de usuário para fazer logon no dispositivo de gateway",
+      "hint": "",
+      "width": null,
+      "obscure": null,
+      "type": null,
+      "isAttribute": null
+   },
+   "device_password": {
+      "name": "password",
+      "label": "Senha",
+      "describe": true,
+      "description": "Forneça a senha para fazer logon no dispositivo de gateway",
+      "hint": "",
+      "width": null,
+      "obscure": true,
+      "type": null,
+      "isAttribute": null
+   },
+   "device_dbname": {
+      "name": "dbname",
+      "label": "Nome do banco de dados",
+      "describe": null,
+      "description": "Banco de dados",
+      "hint": "",
+      "width": null,
+      "obscure": null,
+      "type": null,
+      "isAttribute": null
+   },
+   "config_auto_ppp_user": {
+      "name": "auto_ppp_user",
+      "label": "Gerar automaticamente nome de usuário ppp",
+      "describe": true,
+      "description": "Habilitar para gerar nome de usuário e senha automaticamente",
+      "hint": "",
+      "width": null,
+      "obscure": null,
+      "type": null,
+      "isAttribute": null
+   },
+   "config_uisp_url": {
+      "name": "uisp_url",
+      "label": "Url para api do unms",
+      "describe": true,
+      "description": "Se este software não estiver sendo executado no servidor uisp, altere localhost para o nome ou endereço ip e porta do servidor uisp",
+      "hint": "",
+      "width": 600,
+      "obscure": null,
+      "type": null,
+      "isAttribute": null
+   },
+   "config_uisp_token": {
+      "name": "uisp_token",
+      "label": "Token de api do Unms",
+      "describe": true,
+      "description": "Gere o token nas configurações unms em usuários. O token permite que este software recupere dados de uisp.",
+      "hint": "",
+      "width": null,
+      "obscure": null,
+      "type": null,
+      "isAttribute": null
+   },
+   "config_ppp_pool": {
+      "name": "ppp_pool",
+      "label": "Pool de endereços pppoe globais",
+      "describe": true,
+      "description": "Especifique as sub-redes separadas por vírgula a serem usadas para contas pppoe. Os pools globais são usados em qualquer roteador e exigem um protocolo de roteamento dinâmico, como ospf ou rip, para propagar os endereços com quadros.",
+      "hint": "10.99.0.0/16,10.88.0.0/16",
+      "width": 600,
+      "obscure": null,
+      "type": null,
+      "isAttribute": null
+   },
+   "config_router_ppp_pool": {
+      "name": "router_ppp_pool",
+      "label": "Usar pool de dhcp para pppoe",
+      "describe": true,
+      "description": "Habilite isto para usar o pool dhcp que você definiu em dispositivos gerenciados. Isso desativará o pool pppoe global abaixo",
+      "hint": "",
+      "width": 75,
+      "obscure": null,
+      "type": null,
+      "isAttribute": null
+   },
+   "config_excl_addr": {
+      "name": "excl_addr",
+      "label": "Exclusões de pool IP",
+      "describe": true,
+      "description": "Lista intervalos de endereços que não devem ser atribuídos a clientes dhcp e ppp dos pools",
+      "hint": "10.99.1.1-10.99.1.100,10.99.8.1-10.99.8.100",
+      "width": 600,
+      "obscure": null,
+      "type": null,
+      "isAttribute": null
+   },
+   "config_active_list": {
+      "name": "active_list",
+      "label": "Lista de endereços Mikrotik para usuários ativos",
+      "describe": true,
+      "description": "Nome opcional da lista dinâmica de firewall para contas que não estão suspensas",
+      "hint": "",
+      "width": 550,
+      "obscure": null,
+      "type": null,
+      "isAttribute": null
+   },
+   "config_disabled_list": {
+      "name": "disabled_list",
+      "label": "Lista de endereços Mikrotik para usuários deficientes",
+      "describe": true,
+      "description": "Nome da lista dinâmica de firewall para filtragem e redirecionamento de contas suspensas",
+      "hint": "",
+      "width": 550,
+      "obscure": null,
+      "type": null,
+      "isAttribute": null
+   },
+   "config_disabled_profile": {
+      "name": "disabled_profile",
+      "label": "Perfil Mikrotik para usuários deficientes",
+      "describe": true,
+      "description": "Perfil ppp Mikrotik que é aplicado a contas suspensas. O perfil deve ser criado e configurado para cada roteador",
+      "hint": "",
+      "width": 550,
+      "obscure": null,
+      "type": null,
+      "isAttribute": null
+   },
+   "config_disabled_rate": {
+      "name": "disabled_rate",
+      "label": "Limite de taxa Mikrotik para contas com deficiência",
+      "describe": true,
+      "description": "Taxa de Mikrotik aplicada ao perfil desabilitado e às filas dhcp desabilitadas",
+      "hint": "",
+      "width": 550,
+      "obscure": null,
+      "type": null,
+      "isAttribute": null
+   },
+   "config_unsuspend_date_fix": {
+      "name": "unsuspend_date_fix",
+      "label": "Habilitar correção de data da fatura não suspensa",
+      "describe": true,
+      "description": "Habilitar para ajustar a data de cobrança do aniversário ao cancelar a suspensão de contas",
+      "hint": "",
+      "width": 75,
+      "obscure": null,
+      "type": 1,
+      "isAttribute": null
+   },
+   "config_unsuspend_fix_wait": {
+      "name": "unsuspend_fix_wait",
+      "label": "Atraso na correção da data da fatura em segundos",
+      "describe": true,
+      "description": "Manter padrão 5s",
+      "hint": "",
+      "width": 100,
+      "obscure": null,
+      "type": null,
+      "isAttribute": null
+   },
+   "config_pppoe_user_attr": {
+      "name": "pppoe_user_attr",
+      "label": "Atributo personalizado para nome de usuário",
+      "describe": true,
+      "description": "Define o nome de usuário pppoe do cliente",
+      "hint": "",
+      "width": null,
+      "obscure": null,
+      "type": null,
+      "isAttribute": true
+   },
+   "config_pppoe_caller_attr": {
+      "name": "pppoe_caller_attr",
+      "label": "Atributo personalizado para ID de chamador",
+      "describe": true,
+      "description": "Define o id do chamador pppoe do cliente",
+      "hint": "",
+      "width": null,
+      "obscure": null,
+      "type": null,
+      "isAttribute": true
+   },
+   "config_pppoe_pass_attr": {
+      "name": "pppoe_pass_attr",
+      "label": "Atributo personalizado para senha",
+      "describe": true,
+      "description": "Define a senha pppoe do cliente",
+      "hint": "",
+      "width": null,
+      "obscure": null,
+      "type": null,
+      "isAttribute": true
+   },
+   "config_device_name_attr": {
+      "name": "device_name_attr",
+      "label": "Atributo personalizado para nome de dispositivo",
+      "describe": true,
+      "description": "Define o nome do roteador no qual a conta de serviço será criada",
+      "hint": "",
+      "width": null,
+      "obscure": null,
+      "type": null,
+      "isAttribute": true
+   },
+   "config_mac_addr_attr": {
+      "name": "mac_addr_attr",
+      "label": "Atributo personalizado para endereço mac dhcp",
+      "describe": true,
+      "description": "Define o endereço mac do cliente para uma concessão de dhcp. Observe que fornecer um endereço mac desativa o pppoe para o cliente",
+      "hint": "",
+      "width": null,
+      "obscure": null,
+      "type": null,
+      "isAttribute": true
+   },
+   "config_dhcp6_duid_attr" :
+   {
+      "name" : "dhcp6_duid_attr",
+      "label" : "Custom attribute for dhcp6 mac address (duid)",
+      "describe" : true,
+      "description" : "Mac address used for duid - ether1 on mikrotiks",
+      "isAttribute" : true
+   },
+   "config_dhcp6_iaid_attr" :
+   {
+      "name" : "dhcp6_iaid_attr",
+      "label" : "Custom attribute for dhcp6 wan interface number (iaid)",
+      "describe" : true,
+      "description" : "Used for iaid - hex or decimal",
+      "isAttribute" : true
+   },
+   "config_ip_addr_attr": {
+      "name": "ip_addr_attr",
+      "label": "Atributo personalizado para endereço ip manual",
+      "describe": true,
+      "description": "Define um endereço ip atribuído manualmente. O endereço IP pode ser de um pool externo que não está definido nesta API",
+      "hint": "",
+      "width": null,
+      "obscure": null,
+      "type": null,
+      "isAttribute": true
+   },
+   "config_lease_time" :
+   {
+      "name" : "lease_time",
+      "label" : "Lease duration for dhcpv4 and dhcpv6",
+      "width" : "75",
+      "describe" : true,
+      "description" : "Specify lease duration in minutes. Applies for dhcpv4 and dhcpv6."
+   },
+   "config_disable_contention": {
+      "name": "disable_contention",
+      "label": "Desabilitar contenção de largura de banda",
+      "describe": true,
+      "description": "Marque a opção para desativar filas pai. Pode levar alguns minutos para ser aplicado e excluirá as filas pai dos roteadores.",
+      "hint": "",
+      "width": 75,
+      "obscure": null,
+      "type": null,
+      "isAttribute": null
+   },
+   "config_hs_enable" :
+   {
+      "name" : "hs_enable",
+      "label" : "Ativar contas de hotspots",
+      "describe" : true,
+      "description" : "Ativar ou desativar atributo personalizado da conta do hotspot",
+      "isAttribute" : true
+   },
+   "config_auto_hs_user" :
+   {
+      "name" : "auto_hs_user",
+      "label" : "Nome de usuário do ponto de acesso automático",
+      "describe" : true,
+      "description" : "Ativar para nome de usuário automático. Irá desactivar os nomes de utilizador ppp automáticos",
+      "isAttribute" : true
+   },
+   "service_ratio": {
+      "name": "ratio",
+      "label": "Definir taxa de contenção",
+      "describe": true,
+      "description": "Define o divisor da taxa de contenção",
+      "hint": "number e.g. 4",
+      "width": 200,
+      "obscure": null,
+      "type": null,
+      "isAttribute": null
+   }
+}

@@ -1,0 +1,354 @@
+{
+   "device_name": {
+      "name": "name",
+      "label": "Jina la kifaa",
+      "describe": true,
+      "description": "Bainisha jina la kirafiki la kifaa cha lango. Jina haliwezi kubadilishwa ikiwa kifaa kina watumiaji.",
+      "hint": "",
+      "width": null,
+      "obscure": null,
+      "type": null,
+      "isAttribute": null
+   },
+   "device_ip": {
+      "name": "ip",
+      "label": "Anwani ya IP",
+      "describe": true,
+      "description": "Weka anwani ya IP ya kifaa",
+      "hint": "test.example.com / 10.88.1.1",
+      "width": null,
+      "obscure": null,
+      "type": null,
+      "isAttribute": null
+   },
+   "device_port" :
+   {
+      "name" : "port",
+      "label" : "Port number",
+      "hint" : "443",
+      "describe" : true,
+      "description" : "Set device port number"
+   },
+   "device_pool": {
+      "name": "pool",
+      "label": "Ip4 bwawa",
+      "describe": true,
+      "description": "Bainisha viambishi awali vya ip4 kwa wateja - vinavyohitajika kwa dhcp. Ili kutumia vifaa hivi kwa ppp wezesha chaguo katika mipangilio ya api.",
+      "hint": "10.88.1.0/24",
+      "width": 600,
+      "obscure": null,
+      "type": null,
+      "isAttribute": null
+   },
+   "device_pool6":
+   {
+      "name" : "pool6",
+      "width" : "600",
+      "label" : "Ip6 bwawa",
+      "hint" : "fddc:9057:1bea::/48",
+      "describe" : true,
+      "description" : "Bainisha viambishi awali vya ip6 ili kuwapa wateja. Kwa sasa ni ip6 over ppp pekee ndiyo inayotumika. Viambishi awali vinaweza kutumika tena kwenye ruta nyingi."
+   },
+   "device_pfxLength":
+   {
+      "name" : "pfxLength",
+      "width" : "600",
+      "label" : "Urefu wa kiambishi awali cha ip6 cha mteja",
+      "hint" : "/64",
+      "describe" : true,
+      "description" : "Hubainisha ukubwa wa kiambishi awali cha ip6 cha kukabidhi kila mteja"
+   },
+   "device_user": {
+      "name": "user",
+      "label": "Jina la mtumiaji",
+      "describe": true,
+      "description": "Toa jina la mtumiaji ili kuingia kwenye kifaa cha lango",
+      "hint": "",
+      "width": null,
+      "obscure": null,
+      "type": null,
+      "isAttribute": null
+   },
+   "device_password": {
+      "name": "password",
+      "label": "Nenosiri",
+      "describe": true,
+      "description": "Toa nenosiri ili kuingia kwenye kifaa cha lango",
+      "hint": "",
+      "width": null,
+      "obscure": true,
+      "type": null,
+      "isAttribute": null
+   },
+   "device_dbname": {
+      "name": "dbname",
+      "label": "Jina la hifadhidata",
+      "describe": null,
+      "description": "",
+      "hint": "",
+      "width": null,
+      "obscure": null,
+      "type": null,
+      "isAttribute": null
+   },
+   "config_auto_ppp_user": {
+      "name": "auto_ppp_user",
+      "label": "Tengeneza jina la mtumiaji la ppp otomatiki",
+      "describe": true,
+      "description": "Wezesha kutengeneza jina la mtumiaji na nenosiri kiotomatiki",
+      "hint": "",
+      "width": null,
+      "obscure": null,
+      "type": null,
+      "isAttribute": null
+   },
+   "config_uisp_url": {
+      "name": "uisp_url",
+      "label": "Url kwa unms api",
+      "describe": true,
+      "description": "Ikiwa programu hii haifanyi kazi kwenye seva ya uisp basi badilisha mwenyeji hadi jina au anwani ya ip na mlango wa seva ya uisp.",
+      "hint": "",
+      "width": 600,
+      "obscure": null,
+      "type": null,
+      "isAttribute": null
+   },
+   "config_uisp_token": {
+      "name": "uisp_token",
+      "label": "Unms api tokeni",
+      "describe": true,
+      "description": "Tengeneza tokeni katika mipangilio ya unms chini ya watumiaji. Ishara huruhusu programu hii kupata data kutoka kwa uisp.",
+      "hint": "",
+      "width": null,
+      "obscure": null,
+      "type": null,
+      "isAttribute": null
+   },
+   "config_ppp_pool": {
+      "name": "ppp_pool",
+      "label": "Dimbwi la anwani la pppoe la kimataifa",
+      "describe": true,
+      "description": "Bainisha nyati ndogo zilizotenganishwa kwa koma ili kutumia kwa akaunti za pppoe. Mabwawa ya kimataifa yanatumika kwenye kipanga njia chochote na yanahitaji itifaki inayobadilika ya uelekezaji kama vile ospf au rip ili kueneza anwani zilizowekwa kwenye fremu.",
+      "hint": "10.99.0.0/16,10.88.0.0/16",
+      "width": 600,
+      "obscure": null,
+      "type": null,
+      "isAttribute": null
+   },
+   "config_router_ppp_pool": {
+      "name": "router_ppp_pool",
+      "label": "Tumia bwawa la dhcp kwa pppoe",
+      "describe": true,
+      "description": "Washa hii ili kutumia dimbwi la dhcp ambalo umefafanua chini ya vifaa vinavyodhibitiwa. Hii italemaza dimbwi la kimataifa la pppoe hapa chini",
+      "hint": "",
+      "width": 75,
+      "obscure": null,
+      "type": null,
+      "isAttribute": null
+   },
+   "config_excl_addr": {
+      "name": "excl_addr",
+      "label": "Kutojumuishwa kwa bwawa la IP",
+      "describe": true,
+      "description": "Orodhesha safu za anwani ambazo hazifai kugawiwa kwa wateja wa dhcp na ppp kutoka kwenye bwawa",
+      "hint": "10.99.1.1-10.99.1.100,10.99.8.1-10.99.8.100",
+      "width": 600,
+      "obscure": null,
+      "type": null,
+      "isAttribute": null
+   },
+   "config_active_list": {
+      "name": "active_list",
+      "label": "Orodha ya anwani ya Router kwa watumiaji wanaofanya kazi",
+      "describe": true,
+      "description": "Jina la hiari la orodha inayobadilika ya ngome kwa akaunti ambazo hazijasimamishwa",
+      "hint": "",
+      "width": 550,
+      "obscure": null,
+      "type": null,
+      "isAttribute": null
+   },
+   "config_disabled_list": {
+      "name": "disabled_list",
+      "label": "Orodha ya anwani ya Router kwa watumiaji walemavu",
+      "describe": true,
+      "description": "Jina la orodha inayobadilika ya ngome ya kuchuja na kuelekeza upya akaunti zilizosimamishwa",
+      "hint": "",
+      "width": 550,
+      "obscure": null,
+      "type": null,
+      "isAttribute": null
+   },
+   "config_disabled_profile": {
+      "name": "disabled_profile",
+      "label": "Profaili ya Router kwa watumiaji walemavu",
+      "describe": true,
+      "description": "Wasifu wa Router ppp ambao unatumika kwa akaunti zilizosimamishwa. Wasifu unapaswa kuundwa na kusanidi kila kipanga njia",
+      "hint": "",
+      "width": 550,
+      "obscure": null,
+      "type": null,
+      "isAttribute": null
+   },
+   "config_disabled_rate": {
+      "name": "disabled_rate",
+      "label": "Kikomo cha kiwango cha Router kwa akaunti zilizozimwa",
+      "describe": true,
+      "description": "Kiwango cha Router kinatumika kwa wasifu uliozimwa na kuzima foleni za dhcp",
+      "hint": "",
+      "width": 550,
+      "obscure": null,
+      "type": null,
+      "isAttribute": null
+   },
+   "config_unsuspend_date_fix": {
+      "name": "unsuspend_date_fix",
+      "label": "Washa urekebishaji wa tarehe ya ankara bila kusimamishwa",
+      "describe": true,
+      "description": "Wezesha kurekebisha tarehe ya bili ya kumbukumbu wakati akaunti haijasimamishwa",
+      "hint": "",
+      "width": 75,
+      "obscure": null,
+      "type": 1,
+      "isAttribute": null
+   },
+   "config_unsuspend_fix_wait": {
+      "name": "unsuspend_fix_wait",
+      "label": "Ucheleweshaji wa kurekebisha tarehe ya ankara kwa sekunde",
+      "describe": true,
+      "description": "Acha sekunde 5 chaguomsingi",
+      "hint": "",
+      "width": 100,
+      "obscure": null,
+      "type": null,
+      "isAttribute": null
+   },
+   "config_pppoe_user_attr": {
+      "name": "pppoe_user_attr",
+      "label": "Sifa maalum ya jina la mtumiaji",
+      "describe": true,
+      "description": "Inafafanua jina la mtumiaji la pppoe la mteja",
+      "hint": "",
+      "width": null,
+      "obscure": null,
+      "type": null,
+      "isAttribute": true
+   },
+   "config_pppoe_caller_attr": {
+      "name": "pppoe_caller_attr",
+      "label": "Sifa maalum ya Kitambulisho cha Anayepiga",
+      "describe": true,
+      "description": "Inafafanua kitambulisho cha mpigaji simu cha pppoe",
+      "hint": "",
+      "width": null,
+      "obscure": null,
+      "type": null,
+      "isAttribute": true
+   },
+   "config_pppoe_pass_attr": {
+      "name": "pppoe_pass_attr",
+      "label": "Sifa maalum ya nenosiri",
+      "describe": true,
+      "description": "Inafafanua nenosiri la pppoe la mteja",
+      "hint": "",
+      "width": null,
+      "obscure": null,
+      "type": null,
+      "isAttribute": true
+   },
+   "config_device_name_attr": {
+      "name": "device_name_attr",
+      "label": "Sifa maalum ya jina la kifaa",
+      "describe": true,
+      "description": "Inafafanua jina la router ambayo akaunti ya huduma itaundwa",
+      "hint": "",
+      "width": null,
+      "obscure": null,
+      "type": null,
+      "isAttribute": true
+   },
+   "config_mac_addr_attr": {
+      "name": "mac_addr_attr",
+      "label": "Sifa maalum ya anwani ya dhcp mac",
+      "describe": true,
+      "description": "Inafafanua anwani ya mac ya mteja kwa ukodishaji wa dhcp. Kumbuka kuwa kutoa anwani ya mac kulemaza pppoe kwa mteja",
+      "hint": "",
+      "width": null,
+      "obscure": null,
+      "type": null,
+      "isAttribute": true
+   },
+   "config_dhcp6_duid_attr" :
+   {
+      "name" : "dhcp6_duid_attr",
+      "label" : "Custom attribute for dhcp6 mac address (duid)",
+      "describe" : true,
+      "description" : "Mac address used for duid - ether1 on mikrotiks",
+      "isAttribute" : true
+   },
+   "config_dhcp6_iaid_attr" :
+   {
+      "name" : "dhcp6_iaid_attr",
+      "label" : "Custom attribute for dhcp6 wan interface number (iaid)",
+      "describe" : true,
+      "description" : "Used for iaid - hex or decimal",
+      "isAttribute" : true
+   },
+   "config_ip_addr_attr": {
+      "name": "ip_addr_attr",
+      "label": "Sifa maalum ya anwani ya ip ya mwongozo",
+      "describe": true,
+      "description": "Inafafanua anwani ya ip iliyokabidhiwa mwenyewe. Anwani ya IP inaweza kutoka kwa dimbwi la nje ambalo halijafafanuliwa katika api hii",
+      "hint": "",
+      "width": null,
+      "obscure": null,
+      "type": null,
+      "isAttribute": true
+   },
+   "config_lease_time" :
+   {
+      "name" : "lease_time",
+      "label" : "Lease duration for dhcpv4 and dhcpv6",
+      "width" : "75",
+      "describe" : true,
+      "description" : "Specify lease duration in minutes. Applies for dhcpv4 and dhcpv6."
+   },
+   "config_disable_contention": {
+      "name": "disable_contention",
+      "label": "Lemaza ugomvi wa kipimo data",
+      "describe": true,
+      "description": "Angalia chaguo la kuzima foleni za wazazi. Inaweza kuchukua dakika chache kutuma maombi na itafuta foleni kuu kutoka kwa vipanga njia.",
+      "hint": "",
+      "width": 75,
+      "obscure": null,
+      "type": null,
+      "isAttribute": null
+   },
+   "config_hs_enable" :
+   {
+      "name" : "hs_enable",
+      "label" : "Washa akaunti za mtandaopepe",
+      "describe" : true,
+      "description" : "Washa au uzime sifa maalum ya akaunti ya hotspot",
+      "isAttribute" : true
+   },
+   "config_auto_hs_user" :
+   {
+      "name" : "auto_hs_user",
+      "label" : "Jina la mtumiaji la mtandaopepe otomatiki",
+      "describe" : true,
+      "description" : "Washa kwa jina la mtumiaji otomatiki. Italemaza majina ya watumiaji ya ppp otomatiki",
+      "isAttribute" : true
+   },
+   "service_ratio": {
+      "name": "ratio",
+      "label": "Weka uwiano wa mzozo",
+      "describe": true,
+      "description": "Inaweka kigawanya uwiano wa mzozo",
+      "hint": "number e.g. 4",
+      "width": 200,
+      "obscure": null,
+      "type": null,
+      "isAttribute": null
+   }
+}

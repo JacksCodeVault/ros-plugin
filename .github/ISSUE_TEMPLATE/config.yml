@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Private security report
+    url: mailto:ojangoh2@outlook.com
+    about: Report vulnerabilities privately; do not post them in public issues.
+  - name: Support and reporting guide
+    url: https://github.com/JacksCodeVault/ros-plugin/blob/main/SUPPORT.md
+    about: Read what information to include and where to ask for help.

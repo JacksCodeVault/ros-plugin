@@ -1,0 +1,52 @@
+{
+  "version": "1",
+  "information": {
+    "name": "ros-plugin",
+    "displayName": "Ros Plugin",
+    "description": "Real time provisioning for RouterOs",
+    "url": "",
+    "version": "2.4.0",
+    "ucrmVersionCompliancy": {
+      "min": "2.14.0-beta4",
+      "max": null
+    },
+    "unmsVersionCompliancy": {
+      "min": "1.0.0-dev.1",
+      "max": null
+    },
+    "author": "Dev-Jack"
+  },
+  "menu": [
+        {
+            "key": "ROS Plugin",
+            "label": "Panel",
+            "type" : "admin",
+            "target": "iframe",
+            "parameters":{
+                "page": "panel"
+            }
+        }
+    ],
+  "configuration": [
+    {
+      "key": "webhookToken",
+      "label": "Webhook authentication token",
+      "description": "Required for webhooks: use a random token of at least 32 characters. Configure X-ROS-Webhook-Token or append webhook_token to the webhook URL. See upgrade documentation.",
+      "required": 0
+    },
+    {
+      "key": "unmsToken",
+      "label": "UNMS api token",
+      "description": "Api token to access NMS",
+      "required": 0
+    },
+    {
+      "key": "debugEnable",
+      "label": "Enable Debugging",
+      "description": "Enable verbose log output for debugging",
+      "type": "checkbox",
+      "required": 0
+    }
+  ],
+  "supportsWebhookEvents": true
+}

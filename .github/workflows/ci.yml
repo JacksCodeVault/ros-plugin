@@ -1,0 +1,32 @@
+name: Quality checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php: ['8.2', '8.3', '8.4']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: gmp, curl, sqlite3, openssl, pdo_mysql
+          tools: composer:v2
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: composer validate --strict --no-check-publish
+      - run: composer install --no-interaction --prefer-dist
+      - run: composer check-platform-reqs
+      - run: composer audit --locked
+      - run: find lib public includes tests -name '*.php' -print0 | xargs -0 -n1 php -l
+      - run: php -l public.php && php -l main.php && php -l hook_install.php
+      - run: node --check public/admin-zone.js && node --check public/panel/assets/app.js
+      - run: php tests/regression.php
+      - run: php tests/storage.php
+      - run: php tests/transport.php

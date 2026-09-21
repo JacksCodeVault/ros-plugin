@@ -1,0 +1,47 @@
+# Composer dependencies
+/vendor/
+
+# UCRM / UISP Plugin runtime data directory
+/data/
+/ucrm.json
+
+# Plugin distribution archives
+*.zip
+*.tar.gz
+
+# Local testing and scratch files
+test.json
+.env
+.env.*
+!.env.example
+
+# Log files
+*.log
+
+# SQLite databases (runtime and local copies outside /data/)
+*.db
+*.sqlite
+*.sqlite3
+
+# Screenshots and QA captures (keep docs/ assets tracked)
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+!docs/**
+!public/panel/MT_Symbol_Black.png
+/docs/IMPLEMENTATION_CHECKLIST.md
+
+# Edge / Chromium browser QA profile directories
+.edge-qa-*/
+
+# IDE and OS-specific files
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+.cursor/
+*.swp
+*.swo

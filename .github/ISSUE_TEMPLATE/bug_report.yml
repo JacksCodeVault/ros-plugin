@@ -1,0 +1,32 @@
+name: Bug report
+description: Report a reproducible problem using redacted evidence.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: "Report security vulnerabilities privately to ojangoh2@outlook.com. Never include credentials, customer information, or database backups here."
+  - type: input
+    id: versions
+    attributes:
+      label: Environment
+      description: Plugin, UISP, RouterOS, and PHP versions; API or RADIUS provisioning mode.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Use lab data and include relevant configuration with secrets removed.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Redacted logs or screenshots
+      description: Include useful error text and describe any workaround or regression.

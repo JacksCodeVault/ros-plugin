@@ -1,0 +1,18 @@
+{
+  "description": "ros-plugin",
+  "license": "MIT",
+  "require": {
+    "php": ">=8.0",
+    "ubnt/ucrm-plugin-sdk": "^0.8.2",
+    "ext-openssl": "*",
+    "ext-gmp": "*",
+    "ext-json": "*",
+    "ext-curl": "*",
+    "ext-sqlite3": "*"
+  },
+  "config": {
+    "platform": {
+      "php": "8.0.0"
+    }
+  }
+}
