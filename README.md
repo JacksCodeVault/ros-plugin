@@ -91,7 +91,7 @@ flowchart LR
 - **Granular QoS & Rate Limiting**: Enforces upload/download bandwidth limits, burst percentages, burst thresholds, burst duration, and queue priority (1-8).
 - **Dual-Stack IPv4 & IPv6 IPAM**: Manages 32-bit and 128-bit subnet ranges using the PHP GNU Multiple Precision (GMP) library, preventing IP collisions across multiple routers.
 - **Automated Suspension Enforcement**: Immediately throttles bandwidth, redirects to a walled-garden payment portal via firewall address lists (`disabled_list`), or switches the PPPoE profile when an invoice is overdue.
-- **Instant Unsuspension**: Restores full speed and removes blocklist restrictions the moment payment is received (works seamlessly with payment gateways like M-Pesa).
+- **Instant Unsuspension**: Restores full speed and removes blocklist restrictions the moment payment is received.
 - **Live Device Migration**: Changing the assigned router attribute in UISP automatically deprovisions the subscriber from the old router and recreates them on the new router without data loss.
 - **Hardware Recovery & Rebuild Sync**: Repopulate an entire router with all customer accounts, profiles, and queues in minutes after hardware replacement.
 - **Durable Retry Queue**: Router operations are recorded in `data/jobs.db` with immutable delete targets, bounded exponential backoff, crash recovery, and ordering that prevents replacement accounts from being deleted by stale retries.
